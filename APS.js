@@ -204,3 +204,8 @@ function clearAll() {
 }
 
 window.onload = loadData;
+
+window.addSubject = addSubject;
+window.calculateAPS = calculateAPS;
+window.clearAll = clearAll;
+window.removeSubject = removeSubject;
