@@ -1,0 +1,171 @@
+:root{
+    --primary-green:#1a2a4a;
+    --dark-green:#0d1b2e;
+    --gold:#f4b400;
+    --light-gold:#ffd54f;
+    --white:#ffffff;
+    --light-bg:#f0f2f8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0d1b2e,#1a2a4a);
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    border-top:8px solid var(--gold);
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logo-header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo-header img{
+    width:120px;
+    margin-bottom:10px;
+}
+
+h1{
+    color:var(--primary-green);
+    text-align:center;
+    font-size:2rem;
+}
+
+.subtitle{
+    color:#666;
+    font-size:14px;
+}
+
+.controls{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    margin:5px;
+}
+
+.add-btn{
+    background:var(--gold);
+    color:black;
+}
+
+.add-btn:hover{
+    background:var(--light-gold);
+}
+
+.calc-btn{
+    background:var(--primary-green);
+    color:white;
+}
+
+.calc-btn:hover{
+    background:var(--dark-green);
+}
+
+.clear-btn{
+    background:#d32f2f;
+    color:white;
+}
+
+.remove-btn{
+    background:#ff4444;
+    color:white;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:var(--primary-green);
+    color:white;
+    padding:12px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+select,
+input{
+    width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+select:focus,
+input:focus{
+    border:2px solid var(--gold);
+    outline:none;
+}
+
+.result{
+    background:var(--primary-green);
+    color:white;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+    text-align:center;
+}
+
+#totalAPS{
+    color:var(--gold);
+    font-size:60px;
+    font-weight:bold;
+}
+
+#qualificationMessage{
+    margin-top:10px;
+}
+
+.note{
+    text-align:center;
+    margin-top:15px;
+    color:#666;
+}
+
+.footer{
+    text-align:center;
+    margin-top:15px;
+    color:var(--primary-green);
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+    button{
+        width:100%;
+    }
+
+    table{
+        font-size:12px;
+    }
+}

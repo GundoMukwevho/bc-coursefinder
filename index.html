@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BC CourseFinder</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                <h2>BC CourseFinder</h2>
+            </div>
+
+            <div class="nav-right">
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#chatbot">AI Chatbot</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+                <!-- THEME BUTTON -->
+             <button id="logoutBtn" class="logout-btn">
+  <i class="fa-solid fa-right-from-bracket"></i>
+  Logout
+</button>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <h1>
+                    Welcome to
+                    <span class="highlight">
+                        BC CourseFinder
+                    </span>
+                </h1>
+
+                <p>
+
+                    Explore IT courses, qualifications,
+                    and career opportunities through our
+                    AI-powered academic guidance platform.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn-primary">
+
+                        Learn More
+
+                    </a>
+
+                    <a href="#chatbot" class="btn-secondary">
+
+                        Try AI Chatbot
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                alt="Students">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+
+        <div class="about-container">
+
+            <h2>About Us</h2>
+
+            <p class="about-text">
+
+                BC CourseFinder assists matriculants and
+                aspiring IT students with exploring multiple
+                qualifications, courses, and career pathways
+                within the technology industry.
+
+                Our AI-powered chatbot has been customized
+                with important information related to IT
+                careers, academic requirements, qualifications,
+                and study pathways to help students make
+                informed decisions about their future.
+
+                Students can ask questions directly to the
+                chatbot and receive guidance on fields such as
+                software development, cloud computing,
+                cybersecurity, networking, data analytics,
+                and many other technology disciplines.
+
+            </p>
+
+            <div class="card-container">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <h3>AI Assistance</h3>
+
+                    <p>
+
+                        Receive intelligent guidance instantly
+                        through our AI-powered chatbot.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h3>Course Discovery</h3>
+
+                    <p>
+
+                        Explore qualifications and IT
+                        study opportunities easily.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <h3>Career Guidance</h3>
+
+                    <p>
+
+                        Learn about career paths and
+                        opportunities in the IT industry.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CHATBOT -->
+  
+<!-- CHATBOT + APS SECTION -->
+<section id="chatbot" class="chatbot-section">
+
+    <div class="split-layout">
+
+        <!-- LEFT SIDE : APS CALCULATOR -->
+        <div class="aps-wrapper">
+
+            <div class="aps-container">
+
+                <div class="logo-header">
+                    <h1>Belgium Campus iTversity APS Calculator</h1>
+
+                    <p class="subtitle">
+                        Calculate your Admission Point Score (APS)
+                    </p>
+                </div>
+
+                <div class="controls">
+                    <button class="add-btn" onclick="addSubject()">
+                        + Add Subject
+                    </button>
+
+                    <button class="calc-btn" onclick="calculateAPS()">
+                        Calculate APS
+                    </button>
+
+                    <button class="clear-btn" onclick="clearAll()">
+                        Clear All
+                    </button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Mark (%)</th>
+                            <th>APS</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="subjects"></tbody>
+                </table>
+
+                <div class="result">
+                    <h2>Total APS Score</h2>
+
+                    <div id="totalAPS">0</div>
+
+                    <div id="qualificationMessage"></div>
+                </div>
+
+                <div class="note">
+                    Life Orientation is excluded from the APS total.
+                </div>
+
+                <div class="aps-footer">
+                    Belgium Campus iTversity APS Calculator
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE : CHATBOT -->
+        <div class="chatbot-wrapper">
+
+            <div class="chatbot-header">
+
+                <h2>AI Chatbot</h2>
+
+                <p>
+                    Ask questions about IT courses,
+                    qualifications, and career pathways.
+                </p>
+
+            </div>
+
+            <div class="chatbot-container">
+
+                <div class="chat-box" id="chatBox">
+
+                    <div class="bot-message">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        <span>
+                            Hello. Ask me anything about BC courses.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="chat-input-container">
+
+                    <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask a question...">
+
+                    <button id="sendBtn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send
+
+                    </button>
+
+                </div>
+
+            </div>
+    <h2>Contact Us</h2>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <p>info@bccoursefinder.com</p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <p>+27 00 000 0000</p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <p>Pretoria, South Africa</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+
+            © 2026 BC CourseFinder | AI Course Assistance Platform
+
+        </p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+  <script type="module" src="script.js"></script>
+
+<script src="APS.js" type="module"></script>
+
+
+</body>
+
+</html>

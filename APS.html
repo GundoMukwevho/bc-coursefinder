@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belgium Campus iTversity APS Calculator</title>
+
+    <link rel="stylesheet" href="APS.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo-header">
+        <h1>Belgium Campus iTversity APS Calculator</h1>
+        <p class="subtitle">
+            Calculate your Admission Point Score (APS)
+        </p>
+    </div>
+
+    <div class="controls">
+        <button class="add-btn" onclick="addSubject()">+ Add Subject</button>
+        <button class="calc-btn" onclick="calculateAPS()">Calculate APS</button>
+        <button class="clear-btn" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Mark (%)</th>
+                <th>APS</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+
+        <tbody id="subjects"></tbody>
+    </table>
+
+    <div class="result">
+        <h2>Total APS Score</h2>
+        <div id="totalAPS">0</div>
+        <div id="qualificationMessage"></div>
+    </div>
+
+    <div class="note">
+        Life Orientation is excluded from the APS total.
+    </div>
+
+    <div class="footer">
+        Belgium Campus iTversity APS Calculator
+    </div>
+
+</div>
+
+<script src="APS.js"></script>
+
+</body>
+</html>
